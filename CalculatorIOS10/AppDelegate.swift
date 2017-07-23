@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  CalculatorIOS10
 //
-//  Created by 陈宏杰 on 2017/7/23.
-//  Copyright © 2017年 HikVision. All rights reserved.
-//
 
 import UIKit
 

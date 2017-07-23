@@ -27,18 +27,26 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    var displayValue:Double{//Computed property 计算型属性 实时计算变量的值
+        get{
+            return Double(display.text!)!;
+        }
+        set{
+            display.text=String(newValue);
+        }
+    }
     
     @IBAction func performOperation(_ sender: UIButton) {
         isFirstNumber=true;
         if let mathematicalSymbol=sender.currentTitle{//可以避免可选类型为nil的情况
             switch mathematicalSymbol{
             case "π" :
-                display.text=String(Double.pi);
+                displayValue=Double.pi;
+                //display.text=String(Double.pi);
             case "√":
                 let nume=Double(display.text!);//这个num是可选的 因为有可能转换不成功
-                display.text=String(sqrt(nume!));
-                
+                //display.text=String(sqrt(nume!));
+                displayValue=sqrt(nume!);
             default:
                 break;
             }
